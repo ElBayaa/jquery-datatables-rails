@@ -3418,7 +3418,14 @@
 			else
 			{
 				nScrollBody.style.width = _fnStringToCss( '100%' );
-				o.nScrollHead.style.width = _fnStringToCss( '100%' );
+				if($.browser.webkit)
+				{
+					o.nScrollHead.style.width = _fnStringToCss( o.nScrollHead.parentNode.clientWidth - o.oScroll.iBarWidth ); 
+				}
+				else
+				{
+					o.nScrollHead.style.width = _fnStringToCss( '100%' ); 
+				}
 
 				if ( o.nTFoot !== null )
 				{
