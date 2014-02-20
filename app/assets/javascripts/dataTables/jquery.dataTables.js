@@ -3418,7 +3418,8 @@
 			else
 			{
 				nScrollBody.style.width = _fnStringToCss( '100%' );
-				if($.browser.webkit)
+				if($.browser.webkit && ($('tbody', nScrollBody).height() > nScrollBody.offsetHeight ||
+					$(nScrollBody).css('overflow-y') == "scroll"))
 				{
 					o.nScrollHead.style.width = _fnStringToCss( o.nScrollHead.parentNode.clientWidth - o.oScroll.iBarWidth ); 
 				}
