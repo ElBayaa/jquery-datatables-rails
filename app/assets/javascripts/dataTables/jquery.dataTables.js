@@ -3418,6 +3418,10 @@
 			else
 			{
 				nScrollBody.style.width = _fnStringToCss( '100%' );
+				console.log('>>>>>>>>>>>>>>>>>>');
+				console.log($('tbody', nScrollBody).height());
+				console.log(nScrollBody.offsetHeight);
+				console.log('>>>>>>>>>>>>>>>>>>;');
 				if($.browser.webkit && ($('tbody', nScrollBody).height() > nScrollBody.offsetHeight ||
 					$(nScrollBody).css('overflow-y') == "scroll"))
 				{
